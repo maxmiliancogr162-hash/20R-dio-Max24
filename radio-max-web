@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Moje rádio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    background: #0f0f0f;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+img {
+    max-width: 220px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+}
+.player {
+    margin-top: 20px;
+}
+.nowplaying {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #c8b7ff;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📻 Moje rádio</h1>
+
+<!-- Tvoje fotka -->
+<img src="foto.jpg" alt="Moje fotka">
+
+<!-- Přehrávač -->
+<div class="player cstrEmbed"
+     data-type="newStreamPlayer"
+     data-publicToken="d72e624d-55c2-4a00-b8e7-914703a63998"
+     data-theme="dark"
+     data-color="6C2BDD">
+</div>
+
+<!-- Co právě hraje -->
+<div class="nowplaying">
+    🎶 Právě hraje: <span id="track">Načítám…</span>
+</div>
+
+<script src="//cdn.cloud.caster.fm/widgets/embed.js"></script>
+
+<script>
+fetch("https://api.caster.fm/v2/nowplaying/d72e624d-55c2-4a00-b8e7-914703a63998")
+.then(response => response.json())
+.then(data => {
+    if (data && data.now_playing && data.now_playing.song) {
+        document.getElementById("track").textContent = data.now_playing.song.text;
+    } else {
+        document.getElementById("track").textContent = "Neznámá skladba";
+    }
+})
+.catch(() => {
+    document.getElementById("track").textContent = "Nelze načíst";
+});
+</script>
+
+</body>
+</html>
