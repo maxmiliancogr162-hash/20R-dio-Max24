@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Noční Hity – Maxův Hlídač</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+
+    <div class="header">
+        <img src="robot.png" alt="Robot DJ">
+        <div class="title">
+            <h1>Noční Hity</h1>
+            <h2>Maxův Hlídač</h2>
+        </div>
+    </div>
+
+    <div class="radio-logo">
+        <div class="logo">RÁDIO<br><strong>JIH</strong></div>
+    </div>
+
+    <div class="player">
+        <audio controls>
+            <source src="https://example.com/stream.mp3" type="audio/mpeg">
+            Tvůj prohlížeč nepodporuje audio.
+        </audio>
+
+        <div class="now-playing">
+            Právě hraje: <strong>Street69 – Tančit</strong>
+        </div>
+    </div>
+
+    <div class="quality">
+        AAC+ 256 kbps | AAC+ 128 kbps | MP3 128 kbps
+    </div>
+
+</div>
+
+</body>
+</html>
