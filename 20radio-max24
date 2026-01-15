@@ -2,41 +2,61 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Noční Hity – Maxův Hlídač</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Radio Max24</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .box {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: #ff9800;
+            color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffc107;
+        }
+    </style>
 </head>
 <body>
+    <div class="box">
+        <h1>Radio Max24</h1>
+        <p>
+            Jsme Radio Max a hrajeme vám hity pro maximální náladu.
+            Buďte s námi celý den!
+        </p>
 
-<div class="card">
-
-    <div class="header">
-        <img src="robot.png" alt="Robot DJ">
-        <div class="title">
-            <h1>Noční Hity</h1>
-            <h2>Maxův Hlídač</h2>
-        </div>
+        <button onclick="alert('Tady pak bude stream 🎶')">
+            ▶ Poslouchat živě
+        </button>
     </div>
-
-    <div class="radio-logo">
-        <div class="logo">RÁDIO<br><strong>JIH</strong></div>
-    </div>
-
-    <div class="player">
-        <audio controls>
-            <source src="https://example.com/stream.mp3" type="audio/mpeg">
-            Tvůj prohlížeč nepodporuje audio.
-        </audio>
-
-        <div class="now-playing">
-            Právě hraje: <strong>Street69 – Tančit</strong>
-        </div>
-    </div>
-
-    <div class="quality">
-        AAC+ 256 kbps | AAC+ 128 kbps | MP3 128 kbps
-    </div>
-
-</div>
-
 </body>
 </html>
