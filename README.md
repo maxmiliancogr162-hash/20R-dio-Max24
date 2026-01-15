@@ -1,2 +1,62 @@
-# 20R-dio-Max24
-Jsme Rádio Max a hrajeme vám hity pro maximální náladu. Budeme rádi když nás budete poslouchat
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Radio Max24</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .box {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: #ff9800;
+            color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Radio Max24</h1>
+        <p>
+            Jsme Radio Max a hrajeme vám hity pro maximální náladu.
+            Buďte s námi celý den!
+        </p>
+
+        <button onclick="alert('Tady pak bude stream 🎶')">
+            ▶ Poslouchat živě
+        </button>
+    </div>
+</body>
+</html>
