@@ -54,7 +54,7 @@
             Buďte s námi celý den!
         </p>
 
-        <button onclick="alert('Tady pak bude stream 🎶')">
+        <button onclick="alert('sapircast.caster.fm 🎶')">
             ▶ Poslouchat živě
         </button>
     </div>
