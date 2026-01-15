@@ -1,72 +1,62 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-<meta charset="UTF-8">
-<title>Moje rádio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Radio Max24</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
 
-<style>
-body {
-    background: #0f0f0f;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-}
-img {
-    max-width: 220px;
-    border-radius: 50%;
-    margin: 20px auto;
-    display: block;
-}
-.player {
-    margin-top: 20px;
-}
-.nowplaying {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #c8b7ff;
-}
-</style>
+        .box {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: #ff9800;
+            color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffc107;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="box">
+        <h1>Radio Max24</h1>
+        <p>
+            Jsme Radio Max a hrajeme vám hity pro maximální náladu.
+            Buďte s námi celý den!
+        </p>
 
-<h1>📻 Moje rádio</h1>
-
-<!-- Tvoje fotka -->
-<img src="foto.jpg" alt="Moje fotka">
-
-<!-- Přehrávač -->
-<div class="player cstrEmbed"
-     data-type="newStreamPlayer"
-     data-publicToken="d72e624d-55c2-4a00-b8e7-914703a63998"
-     data-theme="dark"
-     data-color="6C2BDD">
-</div>
-
-<!-- Co právě hraje -->
-<div class="nowplaying">
-    🎶 Právě hraje: <span id="track">Načítám…</span>
-</div>
-
-<script src="//cdn.cloud.caster.fm/widgets/embed.js"></script>
-
-<script>
-fetch("https://api.caster.fm/v2/nowplaying/d72e624d-55c2-4a00-b8e7-914703a63998")
-.then(response => response.json())
-.then(data => {
-    if (data && data.now_playing && data.now_playing.song) {
-        document.getElementById("track").textContent = data.now_playing.song.text;
-    } else {
-        document.getElementById("track").textContent = "Neznámá skladba";
-    }
-})
-.catch(() => {
-    document.getElementById("track").textContent = "Nelze načíst";
-});
-</script>
-
+        <button onclick="alert('Tady pak bude stream 🎶')">
+            ▶ Poslouchat živě
+        </button>
+    </div>
 </body>
 </html>
